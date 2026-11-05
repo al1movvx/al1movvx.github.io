@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3f0e8">
+<meta name="description" content="Рустам Алимов Сухробович — самостоятельное изучение финансовых рынков, рыночной структуры и технического анализа.">
+<meta property="og:title" content="Рустам Алимов — Market Notes">
+<meta property="og:description" content="Личный образовательный проект о финансовых рынках и техническом анализе.">
+<title>Рустам Алимов — Market Notes</title>
+<style>
+:root{--paper:#f3f0e8;--ink:#17231f;--muted:#68736d;--line:#d7d8cf;--green:#245b45;--lime:#c7e36b;--white:#fbfaf6;--dark:#14231e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.shell{width:min(1160px,calc(100% - 48px));margin:auto}
+.topbar{height:76px;display:flex;align-items:center;border-bottom:1px solid var(--line)}.nav{display:flex;justify-content:space-between;align-items:center;gap:24px}.logo{font-size:15px;font-weight:850;letter-spacing:.12em;text-decoration:none}.logo b{color:var(--green)}nav{display:flex;gap:26px;align-items:center}nav a{font-size:13px;text-decoration:none;color:var(--muted)}nav a:hover,.textlink:hover{color:var(--green)}.lang{border:1px solid var(--line);padding:7px 11px;border-radius:99px}
+.hero{padding:82px 0 76px;display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}.overline,.eyebrow{font:700 11px/1.4 ui-monospace,SFMono-Regular,monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}h1{font-size:clamp(52px,7vw,88px);line-height:.98;letter-spacing:-.07em;margin:22px 0 24px;font-weight:780}h1 em{font-style:normal;color:var(--green)}.intro{font-size:19px;line-height:1.55;max-width:590px;color:#536159}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:750}.button.primary{background:var(--green);color:white}.button.ghost{border:1px solid #b9c0b7}.button:hover{transform:translateY(-2px)}
+.visual{background:var(--dark);color:#f3f0e8;border-radius:7px;padding:25px;min-height:350px;position:relative;overflow:hidden}.visual:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff18;border-radius:50%;right:-80px;top:-95px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}.visual-head{display:flex;justify-content:space-between;gap:12px;color:#a8b7ad;font:11px ui-monospace,monospace;letter-spacing:.08em}.visual-title{font-size:25px;line-height:1.15;max-width:270px;margin:34px 0 18px;position:relative;z-index:1}.visual-title span{color:var(--lime)}.chart{width:100%;height:145px;position:relative;z-index:1}.chart-note{font:10px ui-monospace,monospace;color:#829188;margin-top:8px}.ticker{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px;position:relative;z-index:1}.ticker div{border-top:1px solid #ffffff24;padding-top:10px}.ticker strong{display:block;font-size:13px}.ticker small{color:#9aaba0;font-size:10px}
+.section{padding:74px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:28px}.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-.05em;margin:10px 0 0}.section-head p{max-width:390px;color:var(--muted);font-size:14px;margin:0}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:55px}.side-label{font:700 11px ui-monospace,monospace;letter-spacing:.12em;color:var(--green)}.about-copy{font-size:18px;line-height:1.75;max-width:730px}.about-copy p{margin:0 0 18px}.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--white);border:1px solid var(--line);padding:23px;min-height:210px;display:flex;flex-direction:column}.card-top{display:flex;justify-content:space-between;color:var(--green);font:11px ui-monospace,monospace}.card h3{font-size:21px;letter-spacing:-.03em;margin:28px 0 8px}.card p{font-size:14px;color:var(--muted);margin:0}.card .tag{margin-top:auto;padding-top:20px;font:10px ui-monospace,monospace;color:#879189;text-transform:uppercase;letter-spacing:.1em}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:var(--dark);color:var(--paper);padding:28px;border-radius:5px}.panel.light{background:#e7e8dd;color:var(--ink)}.panel h3{font-size:25px;line-height:1.15;margin:12px 0}.panel p{color:#b4c0b7;font-size:14px}.panel.light p{color:var(--muted)}.principles{list-style:none;margin:20px 0 0;padding:0}.principles li{padding:11px 0;border-top:1px solid #ffffff25;font-size:14px}.panel.light .principles li{border-color:var(--line)}
+.journal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.note-card{border-top:2px solid var(--green);padding:19px 0 10px}.note-card small{font:11px ui-monospace,monospace;color:var(--green);letter-spacing:.08em}.note-card h3{font-size:20px;margin:10px 0 6px}.note-card p{font-size:14px;color:var(--muted);margin:0}
+.contact{background:var(--green);color:white;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:25px;border-radius:5px}.contact h2{font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-.05em;margin:10px 0}.contact p{color:#d5e3d9;max-width:480px}.contact .button{background:var(--lime);color:var(--dark);white-space:nowrap}
+footer{padding:28px 0 42px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#778078;font-size:11px}.disclaimer{max-width:650px}
+@media(max-width:760px){.shell{width:min(100% - 30px,1160px)}.topbar{height:auto;padding:17px 0}.nav{align-items:flex-start}.nav nav{gap:11px;flex-wrap:wrap;justify-content:flex-end}.nav nav a{font-size:11px}.hero{grid-template-columns:1fr;padding:55px 0 48px;gap:30px}h1{font-size:58px}.visual{min-height:320px}.section{padding:52px 0}.section-head{display:block}.section-head p{margin-top:15px}.about-grid{grid-template-columns:1fr;gap:18px}.cards{grid-template-columns:1fr}.card{min-height:175px}.split,.journal{grid-template-columns:1fr}.contact{padding:27px;display:block}.contact .button{margin-top:12px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="shell nav">
+<a class="logo" href="#">RA<span><b>.</b></span> / NOTES</a>
+<nav aria-label="Основная навигация"><a href="#about">Профиль</a><a href="#markets">Рынки</a><a href="#approach">Подход</a><a href="#journal">Заметки</a><a class="lang" href="en.html" lang="en">EN ↗</a></nav>
+</div></header>
+<main>
+<section class="shell hero">
+<div>
+<div class="overline">Independent market study · Uzbekistan</div>
+<h1>Рустам<br><em>Алимов.</em></h1>
+<p class="intro">Изучаю финансовые рынки, рыночную структуру и технический анализ. Здесь — мой образовательный путь, наблюдения и заметки.</p>
+<div class="hero-actions"><a class="button primary" href="#about">Обо мне <span>↘</span></a><a class="button ghost" href="https://t.me/al1movvx" target="_blank" rel="noopener">Telegram ↗</a></div>
+</div>
+<aside class="visual">
+<div class="visual-head"><span>MARKET RESEARCH / 001</span><span>SAMARKAND, UZ</span></div>
+<div class="visual-title">Observe.<br><span>Analyse.</span><br>Learn.</div>
+<svg class="chart" viewBox="0 0 440 145" role="img" aria-label="Декоративная иллюстрация графика"><g stroke="#ffffff20" stroke-width="1"><path d="M0 25H440M0 72H440M0 120H440"/></g><path d="M0 110 C40 105 55 70 90 82 S145 110 180 68 S240 82 270 48 S330 70 360 34 S410 40 440 12" fill="none" stroke="#c7e36b" stroke-width="2.5"/><g fill="#c7e36b"><circle cx="90" cy="82" r="3"/><circle cx="180" cy="68" r="3"/><circle cx="270" cy="48" r="3"/><circle cx="360" cy="34" r="3"/></g></svg>
+<div class="chart-note">CONCEPTUAL VISUAL · NOT LIVE MARKET DATA</div>
+<div class="ticker"><div><strong>FOREX</strong><small>Currency markets</small></div><div><strong>XAUUSD</strong><small>Gold</small></div><div><strong>NASDAQ</strong><small>Equity index</small></div></div>
+</aside>
+</section>
+<section class="section" id="about"><div class="shell">
+<div class="section-head"><div><div class="eyebrow">01 / Profile</div><h2>Кто я и что изучаю</h2></div><p>Личная страница о финансовых рынках — без обещаний доходности и выдуманных достижений.</p></div>
+<div class="about-grid"><div class="side-label">RUSTAM ALIMOV<br>INDEPENDENT LEARNER</div><div class="about-copy"><p>Меня зовут <strong>Рустам Алимов Сухробович</strong>. Я самостоятельно изучаю финансовые рынки около шести месяцев и постепенно развиваю знания в области технического анализа.</p><p>Мне интересно разбираться в рыночной структуре, движении цены, торговых сессиях и факторах, которые влияют на поведение инструментов. Этот сайт — место, где я собираю направления своего обучения и буду публиковать собственные образовательные наблюдения.</p><p class="muted">Мой текущий статус — самостоятельное обучение и развитие практических навыков.</p></div></div>
+</div></section>
+<section class="section" id="markets"><div class="shell">
+<div class="section-head"><div><div class="eyebrow">02 / Markets</div><h2>Направления изучения</h2></div><p>Инструменты и темы, за которыми я наблюдаю в рамках самостоятельного обучения.</p></div>
+<div class="cards">
+<article class="card"><div class="card-top"><span>01 / FX</span><span>01</span></div><h3>Forex</h3><p>Валютные пары, взаимосвязь инструментов, структура рынка и факторы изменения курсов.</p><div class="tag">Currency markets</div></article>
+<article class="card"><div class="card-top"><span>02 / METALS</span><span>02</span></div><h3>Gold · XAUUSD</h3><p>Динамика золота, волатильность, технические сценарии и реакция цены на новости.</p><div class="tag">Commodities</div></article>
+<article class="card"><div class="card-top"><span>03 / INDEX</span><span>03</span></div><h3>NASDAQ</h3><p>Поведение фондовых индексов, открытие торговых сессий и рыночная волатильность.</p><div class="tag">Equity indices</div></article>
+</div></div></section>
+<section class="section" id="approach"><div class="shell">
+<div class="section-head"><div><div class="eyebrow">03 / Method</div><h2>Мой подход к обучению</h2></div><p>Системность важнее громких заявлений. В обучении я стараюсь уделять внимание процессу, а не обещаниям результата.</p></div>
+<div class="split">
+<div class="panel"><div class="eyebrow" style="color:#c7e36b">Learning principles</div><h3>Сначала понять.<br>Потом применять.</h3><p>Фокус на постепенном формировании знаний и проверке собственных гипотез.</p><ul class="principles"><li>01 — Изучать контекст рынка</li><li>02 — Фиксировать наблюдения</li><li>03 — Проверять идеи на исторических данных</li><li>04 — Анализировать ошибки и выводы</li></ul></div>
+<div class="panel light"><div class="eyebrow">Areas of interest</div><h3>Что хочу<br>развивать дальше</h3><p>Темы, которые остаются в фокусе моего самостоятельного обучения.</p><ul class="principles"><li>01 — Price action и структура рынка</li><li>02 — Риск-менеджмент и дисциплина</li><li>03 — Макроэкономические события</li><li>04 — Ведение журнала наблюдений</li></ul></div>
+</div></div></section>
+<section class="section" id="journal"><div class="shell">
+<div class="section-head"><div><div class="eyebrow">04 / Journal</div><h2>Заметки и исследования</h2></div><p>Раздел для будущих публикаций. Здесь будут появляться самостоятельные разборы и учебные заметки.</p></div>
+<div class="journal">
+<article class="note-card"><small>STUDY NOTE / 001</small><h3>Как читать рыночную структуру</h3><p>Заметки о максимумах, минимумах и контексте движения цены. Публикация готовится.</p></article>
+<article class="note-card"><small>STUDY NOTE / 002</small><h3>Почему важен риск-менеджмент</h3><p>Образовательный материал о риске, последовательности решений и торговой дисциплине. Публикация готовится.</p></article>
+</div></div></section>
+<section class="section" id="contact"><div class="shell">
+<div class="contact"><div><div class="eyebrow" style="color:#d8e8ad">05 / Contact</div><h2>Открыт к общению<br>и обмену знаниями.</h2><p>Связаться со мной можно через Telegram.</p></div><a class="button" href="https://t.me/al1movvx" target="_blank" rel="noopener">@al1movvx ↗</a></div>
+</div></section>
+</main>
+<footer class="shell"><span>© 2026 Rustam Alimov</span><span class="disclaimer">Сайт носит исключительно информационно-образовательный характер. Материалы не являются инвестиционной рекомендацией или предложением совершать финансовые операции.</span></footer>
+</body></html>
